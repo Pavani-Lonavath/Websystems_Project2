@@ -11,28 +11,29 @@ body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
 .heading {text-align: center;}
+.linkcolor {color: blue;}
 </style>
 <body>
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+<nav class="w3-sidebar w3-indigo w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
   <div class="w3-container">
     <h3 class="w3-padding-64"><b>Web Systems</b></h3>
   </div>
   <div class="w3-bar-block">
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Showcase</a> 
-    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a> 
-    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Designers</a> 
-    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a> 
+    <a href="#introduction" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introduction</a>
+    <a href="#categories" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Categories</a>
+    <a href="#features" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Features</a>
+    <a href="#advantages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Advantages</a> 
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
   </div>
 </nav>
 
 <!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
   <span>Web Systems</span>
 </header>
 
@@ -46,140 +47,79 @@ body {font-size:16px;}
   <div class="w3-container" style="margin-top:80px" id="showcase">
     <h1 class="w3-jumbo heading"><b>Google Virtual Private Cloud</b></h1>
     <h1 class="w3-jumbo heading"><b>Tutorial</b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>Showcase.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
   </div>
   
-  <!-- Photo grid (modal) -->
-  <div class="w3-row-padding">
-    <div class="w3-half">
-      <img src="/w3images/kitchenconcrete.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
-      <img src="/w3images/livingroom.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
-      <img src="/w3images/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
-    </div>
-
-    <div class="w3-half">
-      <img src="/w3images/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
-      <img src="/w3images/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
-      <img src="/w3images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
-    </div>
+  <!-- Introduction -->
+  <div class="w3-container" id="introduction" style="margin-top:75px">
+    <h1 class="w3-xxxlarge"><b>Introduction</b></h1>
+    <hr style="width:50px;border:5px solid #3f51b5" class="w3-round">
+    <h3>Virtual Private Cloud</h3>
+      <p>VPC is nothing but a private cloud that is being hosted inside a public cloud. The term “Virtual” arrived because the resources are not shared in a public infrastructure unlike the public clouds. Due to such isolation of data, it is called Virtual Private Cloud. For achieving such isolation, technologies like subnets, VLAN(virtual local area network) and VPN(virtual private network) are required.</p><br>
+    <img src="Images/architecture.png" alt="Architecture" style="width:100%"><br><br>
+    <h3>Virtual Private Cloud instead of Private Cloud</h3>
+      <p>Virtual private cloud provides:</p>
+      <p>--> <b>Better scalability</b> as the users have the advantage of adding more and more computing resources based on demand.</p>
+      <p>--> <b>Easy hybrid cloud deployment</b> as connecting a virtual private network to a public cloud becomes very easy with the help of virtual private network.</p>
+      <p>--> <b>Better performance</b> because the applications and websites hosted on the cloud process and perform better compared to the ones performing on the local servers.</p>
+      <p>--> <b>Better security</b> as the data or information which is passed to the virtual private cloud is under control of the user itself.</p><br>
+    <h3>Google Virtual Private Cloud</h3>
+      <p>--> Google VPC is a virtual private cloud which provides networking functionalities and facilities like running code, storing data, hosting websites, etc.</p>
+      <p>--> It gives you the flexibility to scale and control how workloads connect regionally and globally.</p>
+      <p>--> When you connect your on-premises or remote resources to Google Cloud, you’ll have global access to your VPCs without needing to replicate connectivity or administrative policies in each region.</p>
+      <p>--> <a href="https://www.youtube.com/watch?v=cNb7xKyya5c" target="_blank" class="linkcolor">Click here</a> to get started with Virtual Private Cloud on Google cloud platform</p>
   </div>
 
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
-    </div>
+  <!-- Categories -->
+  <div class="w3-container" id="categories" style="margin-top:75px">
+    <h1 class="w3-xxxlarge "><b>Categories</b></h1>
+    <hr style="width:50px;border:5px solid #3f51b5" class="w3-round">
+    <h3>Global irtual Private Cloud</h3>
+      <img src="Images/Global_VPC.png" alt="Global Virtual Private Cloud" style="display: block; width:50%; margin-left: auto; margin-right: auto;">
+      <p>Global VPC provides global scope between regions. The benefit of global VPC is that connection between VPC and on-premises resources is not required in every region. No communication takes place through public internet while global VPC spans multiple regions.</h3><br><br>
+    <h3>Shareable Virtual Private Cloud </h3>
+      <img src="Images/Shareable_VPC.png" alt="Shareable Virtual Private Cloud" style="display: block; width:50%; margin-left: auto; margin-right: auto;">
+      <p>Google VPC can also be shareable. It provides shareable configuration between different projects. Despite of isolation within the projects, they maintain a shared private IP space. They also have access to the common services that are provided like Virtual Private Network and Cloud Interconnect.</p><br>
+    <h3>Expandable Virtual Private Cloud </h3>
+      <img src="Images/Expandable_VPC.png" alt="Expandable Virtual Private Cloud" style="display: block; width:50%; margin-left: auto; margin-right: auto;">
+      <p>Google VPC can also be expandable. It provides you with a functionality which allows you to increase the IP space of subnets used in the system without any workload shutdowns. The advantage of expandable VPC is the flexibility it provides along with the growth options using which customer needs are fulfilled.</p><br>
+    <h3>Transparent Virtual Private Cloud</h3>
+      <img src="Images/Transparent_VPC.png" alt="Transparent Virtual Private Cloud" style="display: block; width:50%; margin-left: auto; margin-right: auto;">
+      <p>Transparent google VPC provides you with near real-time logging to monitor your applications and their deployment. VPC flow logs are used for this purpose. Using this process one can analyze the performance of the application and the networking concepts involved in it. Advantage of transparent VPC is that the deployment of the applications are done securely and efficiently.</p>
   </div>
 
-  <!-- Services -->
-  <div class="w3-container" id="services" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Services.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
-    <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-  </div>
-  
-  <!-- Designers -->
-  <div class="w3-container" id="designers" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Designers.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>The best team in the world.</p>
-    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-    <p><b>Our designers are thoughtfully chosen</b>:</p>
+
+  <!-- Features -->
+  <div class="w3-container" id="features" style="margin-top:75px">
+    <h1 class="w3-xxxlarge "><b>Features</b></h1>
+    <hr style="width:50px;border:5px solid #3f51b5" class="w3-round">
+    <p>--> VPC network</p>
+    <p>--> Packet Mirroring</p>
+    <p>--> VPN</p>
+    <p>--> Firewall</p>
+    <p>--> VPC peering</p>
+    <p>--> Shared VPC</p>
+    <p>--> Routes</p>
+    <p>--> VPC flow logs</p>
+    <p>--> Simple and complex architectures</p>
+    <p>--> Disaster recovery</p>
+    <p>--> Private access</p>
+    <p>--> Bring your own IPs</p>
   </div>
 
-  <!-- The Team -->
-  <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
-        <div class="w3-container">
-          <h3>John Doe</h3>
-          <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
-        <div class="w3-container">
-          <h3>Jane Doe</h3>
-          <p class="w3-opacity">Designer</p>
-          <p>Phasellu eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
-        <div class="w3-container">
-          <h3>Mike Ross</h3>
-          <p class="w3-opacity">Architect</p>
-          <p>Phasellus e get enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
+  <!-- Advantages -->
+  <div class="w3-container" id="advantages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge "><b>Advantages</b></h1>
+    <hr style="width:50px;border:5px solid #3f51b5" class="w3-round">
+    <p>--> Flexible</p>
+    <p>--> Secure</p>
+    <p>--> Performance</p>
+    <p>--> Scalable</p>
   </div>
 
-  <!-- Packages / Pricing Tables -->
-  <div class="w3-container" id="packages" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Packages.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
-  </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-half w3-margin-bottom">
-      <ul class="w3-ul w3-light-grey w3-center">
-        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-        <li class="w3-padding-16">Floorplanning</li>
-        <li class="w3-padding-16">10 hours support</li>
-        <li class="w3-padding-16">Photography</li>
-        <li class="w3-padding-16">20% furniture discount</li>
-        <li class="w3-padding-16">Good deals</li>
-        <li class="w3-padding-16">
-          <h2>$ 199</h2>
-          <span class="w3-opacity">per room</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-        
-    <div class="w3-half">
-      <ul class="w3-ul w3-light-grey w3-center">
-        <li class="w3-red w3-xlarge w3-padding-32">Pro</li>
-        <li class="w3-padding-16">Floorplanning</li>
-        <li class="w3-padding-16">50 hours support</li>
-        <li class="w3-padding-16">Photography</li>
-        <li class="w3-padding-16">50% furniture discount</li>
-        <li class="w3-padding-16">GREAT deals</li>
-        <li class="w3-padding-16">
-          <h2>$ 249</h2>
-          <span class="w3-opacity">per room</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-  
   <!-- Contact -->
   <div class="w3-container" id="contact" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h1 class="w3-xxxlarge "><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid #3f51b5" class="w3-round">
     <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
     <form action="/action_page.php" target="_blank">
       <div class="w3-section">
@@ -194,15 +134,14 @@ body {font-size:16px;}
         <label>Message</label>
         <input class="w3-input w3-border" type="text" name="Message" required>
       </div>
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-indigo w3-margin-bottom">Send Message</button>
     </form>  
   </div>
 
 <!-- End page content -->
 </div>
 
-<!-- W3.CSS Container 
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>-->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"></div>
 
 <script>
 // Script to open and close sidebar
