@@ -6,8 +6,9 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:16px;}
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif} 
+body {font-size:16px; text-align: justify;}
+.w3-main h3 {font-weight: 850; text-decoration: underline;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
 .heading {text-align: center;}
@@ -25,9 +26,23 @@ body {font-size:16px;}
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
     <a href="#introduction" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introduction</a>
     <a href="#categories" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Categories</a>
-    <a href="#features" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Features</a>
-    <a href="#advantages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Advantages</a> 
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+    <div class="w3-dropdown-hover">
+      <button onclick="window.location.href='#features'" class="w3-button">Features</button>
+      <div class="w3-dropdown-content w3-bar-block w3-border">
+        <a href="#vpc-network" class="w3-bar-item w3-button">VPC Network</a>
+        <a href="#packet-mirroring" class="w3-bar-item w3-button">Packet Mirroring</a>
+        <a href="#vpn" class="w3-bar-item w3-button">VPN</a>
+        <a href="#firewall" class="w3-bar-item w3-button">Firewall</a>
+        <a href="#vpc-peering" class="w3-bar-item w3-button">VPC Peering</a>
+        <a href="#shared-vpc" class="w3-bar-item w3-button">Shared VPC</a>
+        <a href="#routes" class="w3-bar-item w3-button">Routes</a>
+        <a href="#vpc-flow-logs" class="w3-bar-item w3-button">VPC flow logs</a>
+        <a href="#disaster-recovery" class="w3-bar-item w3-button">Disaster recovery</a>
+        <a href="#private-access" class="w3-bar-item w3-button">Private access</a>
+        <a href="#bring-own-ips" class="w3-bar-item w3-button">Bring your own IPs</a>
+      </div>
+    </div>
+    <a href="#advantages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Advantages</a>
   </div>
 </nav>
 
@@ -58,22 +73,22 @@ body {font-size:16px;}
     <img src="Images/architecture.png" alt="Architecture" style="width:100%"><br><br>
     <h3>Virtual Private Cloud instead of Private Cloud</h3>
       <p>Virtual private cloud provides:</p>
-      <p>--> <b>Better scalability</b> as the users have the advantage of adding more and more computing resources based on demand.</p>
-      <p>--> <b>Easy hybrid cloud deployment</b> as connecting a virtual private network to a public cloud becomes very easy with the help of virtual private network.</p>
-      <p>--> <b>Better performance</b> because the applications and websites hosted on the cloud process and perform better compared to the ones performing on the local servers.</p>
-      <p>--> <b>Better security</b> as the data or information which is passed to the virtual private cloud is under control of the user itself.</p><br>
+      <p>&rarr; <b>Better scalability</b> as the users have the advantage of adding more and more computing resources based on demand.</p>
+      <p>&rarr; <b>Easy hybrid cloud deployment</b> as connecting a virtual private network to a public cloud becomes very easy with the help of virtual private network.</p>
+      <p>&rarr; <b>Better performance</b> because the applications and websites hosted on the cloud process and perform better compared to the ones performing on the local servers.</p>
+      <p>&rarr; <b>Better security</b> as the data or information which is passed to the virtual private cloud is under control of the user itself.</p><br>
     <h3>Google Virtual Private Cloud</h3>
-      <p>--> Google VPC is a virtual private cloud which provides networking functionalities and facilities like running code, storing data, hosting websites, etc.</p>
-      <p>--> It gives you the flexibility to scale and control how workloads connect regionally and globally.</p>
-      <p>--> When you connect your on-premises or remote resources to Google Cloud, you’ll have global access to your VPCs without needing to replicate connectivity or administrative policies in each region.</p>
-      <p>--> <a href="https://www.youtube.com/watch?v=cNb7xKyya5c" target="_blank" class="linkcolor">Click here</a> to get started with Virtual Private Cloud on Google cloud platform</p>
+      <p>&rarr; Google VPC is a virtual private cloud which provides networking functionalities and facilities like running code, storing data, hosting websites, etc.</p>
+      <p>&rarr; It gives you the flexibility to scale and control how workloads connect regionally and globally.</p>
+      <p>&rarr; When you connect your on-premises or remote resources to Google Cloud, you’ll have global access to your VPCs without needing to replicate connectivity or administrative policies in each region.</p>
+      <p>&rarr; <a href="https://www.youtube.com/watch?v=cNb7xKyya5c" target="_blank" class="linkcolor">Click here</a> to get started with Virtual Private Cloud on Google cloud platform</p>
   </div>
 
   <!-- Categories -->
   <div class="w3-container" id="categories" style="margin-top:75px">
     <h1 class="w3-xxxlarge "><b>Categories</b></h1>
     <hr style="width:50px;border:5px solid #3f51b5" class="w3-round">
-    <h3>Global irtual Private Cloud</h3>
+    <h3>Global Virtual Private Cloud</h3>
       <img src="Images/Global_VPC.png" alt="Global Virtual Private Cloud" style="display: block; width:50%; margin-left: auto; margin-right: auto;">
       <p>Global VPC provides global scope between regions. The benefit of global VPC is that connection between VPC and on-premises resources is not required in every region. No communication takes place through public internet while global VPC spans multiple regions.</p><br>
     <h3>Shareable Virtual Private Cloud </h3>
@@ -92,50 +107,183 @@ body {font-size:16px;}
   <div class="w3-container" id="features" style="margin-top:75px">
     <h1 class="w3-xxxlarge "><b>Features</b></h1>
     <hr style="width:50px;border:5px solid #3f51b5" class="w3-round">
-    <p>--> VPC network</p>
-    <p>--> Packet Mirroring</p>
-    <p>--> VPN</p>
-    <p>--> Firewall</p>
-    <p>--> VPC peering</p>
-    <p>--> Shared VPC</p>
-    <p>--> Routes</p>
-    <p>--> VPC flow logs</p>
-    <p>--> Simple and complex architectures</p>
-    <p>--> Disaster recovery</p>
-    <p>--> Private access</p>
-    <p>--> Bring your own IPs</p>
+    <h3 id="vpc-network"><b>VPC network</b></h3>
+      <p>A VPC network is a global resource that consists of a list of regional virtual subnetworks (subnets) in data centers, all connected by a global wide area network.</p>
+      <img src="Images/VPC_Network.PNG" alt="VPC Network" style="display: block; width:50%; margin-left: auto; margin-right: auto;">
+      <p>Projects can contain multiple VPC networks.</p>
+      <h5><b>Specifications</b></h5>
+        <p>* VPC networks, including their associated routes and firewall rules, are global resources. They are not associated with any particular region or zone.</p>
+        <p>* Subnets are regional resources. Each subnet defines a range of IP addresses.</p>
+        <p>* VPC networks can be connected to other VPC networks in different projects or organizations by using VPC Network Peering.</p>
+      <h5><b>Networks and subnets</b></h5>
+        <p>* Each VPC network consists of one or more useful IP range partitions called subnets. Each subnet is associated with a region. VPC networks do not have any IP address ranges associated with them. IP ranges are defined for the subnets.</p>
+        <p>* When you create a resource in Google Cloud, you choose a network and subnet. </p>
+      <h5><b>Default network</b></h5>
+        <p>* Unless you choose to disable it, each new project starts with a default network. The default network is an auto mode VPC network with pre-populated firewall rules.</p>
+      <h5><b>Subnets and IP ranges</b></h5>
+        <p>* When you create a subnet, you must define a primary IP address range. You can optionally define secondary IP address ranges: Primary and Secondary.</p>
+      <h5><b>Reserved IPs</b></h5>
+        <p>* Every subnet has four reserved IP addresses in its primary IP range. There are no reserved IP addresses in the secondary IP ranges.</p>
+        <img src="Images/ReservedIPs.png" alt="Reserved IPs" style="display: block; width:50%; margin-left: auto; margin-right: auto;"><br><br><br>
+
+    <h3 id="packet-mirroring"><b>Packet Mirroring</b></h3>
+      <p>Packet mirroring is a feature in which it copies the traffic of the instances which are specified in the Virtual Private Cloud network. Then these copies of traffic are sent to a collector destination for examination. The data captured in this process includes ingress traffic (traffic that enters a network boundary), egress traffic (traffic that exits a network boundary) and packet data specifically payloads and headers. The process of mirroring is conducted on instances of Virtual Machines.</p>
+      <img src="Images/PacketMirroring.png" alt="Packet Mirroring" style="display: block; width:50%; margin-left: auto; margin-right: auto;">
+      <p>The purpose of this feature is to monitor or analyze your security status. Real world scenarios in which packet mirroring becomes very useful are:</p>
+        <p>* Enterprise Security (to detect threats or anomalies)</p>
+        <p>* Application performance monitoring (to detect application performance issues)</p>
+      <p>The source and destination are specified by a packet mirroring policy. The mirrored source can be the compute engine instances and the collector destination can be an instance group.</p><br>
+
+    <h3 id="vpn"><b>VPN</b></h3>
+      <p>Cloud Virtual Private Network is one of the feature which is used to connect a peer network to virtual private cloud network with the help of an IPsec (Internet Protocol Security) connection. Main objective is to protect the data that travels over internet and provide a secure connection between two networks. Encryption and decryption of the traffic traveling between two networks is done using VPN gateways.</p>
+      <p>Google cloud provides two types of VPN:</p>
+        <p><b>1. HA VPN:</b> It is a high availability cloud VPN used to provide secured connection between networks in a single region. It is configured using two interfaces and two public IPs. In this VPN, only dynamic routing is supported.</p>
+        <p><b>2. Classic VPN:</b> It is configured using single interface and a single external IP address. In this VPN, both static routing and dynamic routing are supported.</p><br>
+
+    <h3 id="firewall"><b>Firewall</b></h3>
+      <p>Every Virtual Private Cloud (VPC) network functions as a distributed firewall. While firewall rules are defined at the network level, connections are allowed or denied on a per-instance basis.</p>
+      <p>You create or modify Google Cloud firewall rules by using the Google Cloud Console, gcloud command-line tool, and REST API.</p>
+        <p>* Google Cloud doesn't allow certain IP protocols, such as GRE, within a VPC network</p>
+        <p>* Google Cloud always allows communication between a VM instance and its corresponding metadata server at 169.254.169.254.</p>
+        <p>* Every network has two implied firewall rules that permit outgoing connections and block incoming connections</p>
+        <p>* The default network is pre-populated with firewall rules that you can delete or modify.</p>
+      <h5><b>Specifications</b></h5>
+        <p>* Each firewall rule applies to incoming (ingress) or outgoing (egress) traffic, not both. For more information, see direction of traffic.</p>
+        <p>* Firewall rules only support IPv4 traffic. When specifying a source for an ingress rule or a destination for an egress rule by address, you can only use an IPv4 address or IPv4 block in CIDR notation.</p>
+        <p>* Each firewall rule's action is either allow or deny. The rule applies to traffic as long as it is enforced. For example, you can disable a rule for troubleshooting purposes. When you create a firewall rule, you must select a VPC network.</p>
+      <p>Google Cloud firewall rules are stateful. After a session has been established, firewall rules allow bidirectional communication.  Google Cloud associates incoming packets with corresponding outbound packets by using a connection tracking table.</p>
+      <p>The maximum number of tracked connections in the firewall rule table depends on the number of stateful connections supported by the machine type of the instance.</p>
+      <h5><b>Firewall rule components</b></h5>
+        <p>* The direction of traffic: ingress rules apply to incoming connections from specified sources to Google Cloud targets, and egress rules apply to traffic going to specified destinations from targets.</p>
+        <p>* A numerical priority, which determines whether the rule is applied. Only the highest priority (lowest priority number) rule whose other components match traffic is applied; conflicting rules with lower priorities are ignored.</p>
+        <p>* An action on match, either allow or deny, which determines whether the rule permits or blocks traffic.</p>
+        <p>* The enforcement status of the firewall rule: You can enable and disable firewall rules without deleting them.</p>
+        <p>* A target, which defines the instances to which the rule applies. A source for ingress rules or a destination for egress rules.</p><br>
+
+    <h3 id="vpc-peering"><b>VPC peering</b></h3>
+      <p>VPC network peering feature allows you to have a private RFC 1918 (Address allocation for private internets) connection between two Virtual Private Cloud networks irrespective of whether they are within the same project or same organization.</p>
+      <p>Peering is done so that communication between workloads of different VPC networks can take place in a private space (RFC 1918)</p>
+      <h5><b>Uses</b></h5>
+        <p>* Used for SaaS ecosystems in google cloud.</p>
+        <p>* Peering can happen between different organizations having multiple network administrative domains. It makes services available across all networks involved in the organizations.</p>
+      <h5><b>Advantages</b></h5>
+        <p>* There are certain advantages of using VPC network peering instead of external IP addresses and VPN to provide connection between networks.</p>
+        <p>* <b>Network latency: </b>Private networking has lower latency compared to public IP networking which deals with much higher latency. Peering traffic remains in the network of google itself.</p>
+        <p>* <b>Network security: </b>Service owners do not have to expose their services to public internet and face unnecessary risks.</p>
+        <p>* <b>Network cost: </b>Networks that are peered can use internal IPs for communication purpose and hence save the egress cost (cost of outgoing network traffic).</p><br>
+
+    <h3 id="shared-vpc"><b>Shared VPC</b></h3>
+      <p>Main objective of shared VPC is that it allows an organization to connect different resources from multiple projects to a common VPC network. This makes the communication between them secured and efficient with the help of internal IPs of the common VPC network.</p>
+      <p>While using shared VPC, a project is designated as a host project and multiple projects are attached to it which are called service projects.</p>
+      <img src="Images/SharedVPC.png" alt="Shared VPC" style="display: block; width:50%; margin-left: auto; margin-right: auto;">
+      <h5><b>Concepts</b></h5>
+        <p><b>* Shared VPC networks: </b>VPC networks defined in the host project are called shared VPC networks. It is made available as a common shared network for the resources of different projects involved in the organization.</p>
+        <p><b>* Host Project: </b>It contains one or more shared VPC networks . A shared VPC admin designates a project as host project.</p>
+        <p><b>* Shared VPC admin: </b>Perform tasks like setting up shared VPC, designating host project, attaching service projects to host projects.</p>
+        <p><b>* Service project: </b>It is a project that is attached to host project by the admin. Because of this connection, service projects can participate in shared VPC.</p>
+        <p><b>* Standalone project: </b>Project that does not participate in shared VPC.</p>
+      <p>Centralize control with shared VPC: <a href="https://www.youtube.com/watch?v=WotV3D01tJA" target="_blank" class="linkcolor">Click here</a></p>
+      <p>How to create shared VPC: <a href="https://www.youtube.com/watch?v=4MtfyViH9t0" target="_blank" class="linkcolor">Click here</a></p><br>
+
+    <h3 id="routes"><b>Routes</b></h3>
+      <p>Google Cloud routes define the paths that network traffic takes from a virtual machine (VM) instance to other destinations. These destinations can be inside your Google Cloud Virtual Private Cloud (VPC) network (for example, in another VM) or outside it.</p>
+      <p>In a VPC network, a route consists of a single destination (CIDR) and a single next hop</p>
+      <p>VPC networks can include system-generated routes or custom routes.</p>
+      <img src="Images/SystemGeneratedRoutes.png" alt="System Generated Routes" style="display: block; width:50%; margin-left: auto; margin-right: auto;">
+      <img src="Images/CustomRoutes.png" alt="Custom Routes" style="display: block; width:50%; margin-left: auto; margin-right: auto;">
+      <h5><b>Static routes</b></h5>
+        <p>* Static routes can use any of the static route next hops.</p>
+        <p>* If you use the Google Cloud Console to create a Cloud VPN tunnel that uses policy-based routing or one that is a route-based VPN, static routes for the remote traffic selectors are created for you. For more information, see Cloud VPN networks and tunnel routing.</p>
+      <h5><b>Dynamic routes</b></h5>
+        <p>Dynamic routes are managed by one or more Cloud Routers. Their destinations always represent IP ranges outside your VPC network, and their next hops are always BGP peer addresses. A Cloud Router can manage dynamic routes for:</p>
+        <p>&rarr; Cloud VPN tunnels that use dynamic routing</p>
+        <p>&rarr; Cloud Interconnect</p><br>
+
+
+    <h3 id="vpc-flow-logs"><b>VPC flow logs</b></h3>
+      <p>VPC flow logs record a sample of network flows sent from and received by VM instances.</p>
+      <p>Flow logs can be viewed in cloud logging and one can export logs to any destination that cloud logging export supports.</p>
+      <p>GCP flow logs are updated every five seconds, providing immediate visibility.</p>
+      <p>VPC flow logs are used in:</p>
+        <h5><b>Network monitoring </b>(provides you with real time visibility into network throughput and performance)</h5>
+          <p>* Monitor VPC network</p>
+          <p>* Perform network diagnosis</p>
+          <p>* Filter the flow logs by VMs and by applications to understand traffic changes</p>
+        <h5><b>Forensics </b>(utilize flow logs for network forensics)</h5>
+          <p>* One can examine which IPs talked with whom and when</p>
+          <p>* Any compromised IPs by analyzing all the incoming and outgoing network flows</p>
+        <h5><b>Real-time security analysis</b></h5>
+          <p>* We can leverage the real-time streaming APIs and integrate with SIEM systems (Security Information and Event Management). This provides real time monitoring, correlation of events, analysis and security alerts</p>
+        <h5><b>Expense optimization </b>(based on analysis, we can optimize network traffic expense) </h5>
+          <p>* Analyze network flows for traffic between regions and zones</p>
+          <p>* Analyze network flows for traffic to specific countries on internet</p>
+          <p>* Analyze network flows for top talkers</p>
+      <h5><b>Properties of VPC flow logs:</b></h5>
+        <p>* We can enable or disable VPC flow logs for every VPC subnet.</p>
+        <p>* We can use filters o select which flow logs are excluded from logging and which are exported to external APIs.</p><br>
+
+    <h3 id="disaster-recovery"><b>Disaster recovery</b></h3>
+      <h5><b>Creating a detailed DR plan</b></h5>
+        <p>* Design according to your recovery goals</p>
+        <p>* Design for end-to-end recovery</p>
+        <p>* Make your tasks specific</p>
+      <h5><b>Implementing control measures</b></h5>
+      <h5><b>Preparing your software</b></h5>
+        <p>* Verify that you can install your software</p>
+        <p>* Design continuous deployment for recovery</p>
+      <h5><b>Implementing security and compliance control</b></h5>
+        <p>* Configure security the same for the DR and production environments</p>
+        <p>* Verify your DR security</p>
+        <p>* Make sure users can log in to the DR environment</p>
+        <p>* Train users</p>
+        <p>* Make sure that the DR environment meets compliance requirements</p>
+        <p>* Use Cloud Storage as part of your daily backup routines</p>
+        <p>* Manage secrets properly</p>
+        <p>* Treat recovered data like production data</p>
+      <h5><b>Making sure your DR plan works</b></h5>
+        <p>* Maintain more than one data recovery path</p>
+        <p>* Test your plan regularly</p><br>
+
+    <h3 id="private-access"><b>Private access</b></h3>
+      <p>VM instances that only have internal IP addresses (no external IP addresses) can use Private Google Access.</p>
+      <p>* They can reach the external IP addresses of Google APIs and services.</p>
+      <p>* The source IP address of the packet can be the primary internal IP address of the network interface or an address in an alias IP range that is assigned to the interface.</p>
+      <p>* If you disable Private Google Access, the VM instances can no longer reach Google APIs and services; they can only send traffic within the VPC network.</p>
+      <h5><b>Supported services</b></h5>
+        <p>Private Google Access permits access to Cloud and Developer APIs and most Google Cloud services, except for the following services:</p>
+        <p>* App Engine Memcache</p>
+        <p>* Filestore</p>
+        <p>* Memorystore</p>
+        <p>* Cloud SQL</p>
+      <h5><b>Implementation </b></h5>
+        <img src="Images/PrivateAccessImplementation.png" alt="Private Access Implementation" style="display: block; width:50%; margin-left: auto; margin-right: auto;">
+        <p>The following list provides details about the above diagram:</p>
+        <p>* Firewall rules in the VPC network have been configured to allow egress to 0.0.0.0/0 (or at least to the server IPs for Google APIs and services).</p>
+        <p>* VM A1 can access Google APIs and services, including Cloud Storage, because its network interface is located in subnet-a, which has Private Google Access enabled. Private Google Access applies to the instance because it only has an internal IP address.</p>
+        <p>* VM B1 cannot access Google APIs and services because it only has an internal IP address and Private Google Access is disabled for subnet-b.</p>
+        <p>* VM A2 and VM B2 can both access Google APIs and services, including Cloud Storage, because they each have external IP addresses. Private Google Access has no effect on whether or not these instances can access Google APIs and services because both have external IP addresses.</p><br>
+
+    <h3 id="bring-own-ips"><b>Bring your own IPs</b></h3>
+      <p>By bringing your own IP addresses(BYOIP), you can accelerate the migration while minimizing downtime, as well as significantly reduce the networking infrastructure costs.</p>
+      <p>With Google Cloud, your BYOIP prefixes can be broken into blocks as small as 16 addresses (/28), can be distributed to any region, and can also be used for global load balancers, creating more flexibility with the resources you already have.</p>
+      <p>They needed this feature for two main reasons:</p>
+        <p>* Hard-coded IPs delaying migration</p>
+        <p>* Costs of legacy networking infrastructure.</p>
+
   </div>
 
   <!-- Advantages -->
   <div class="w3-container" id="advantages" style="margin-top:75px">
     <h1 class="w3-xxxlarge "><b>Advantages</b></h1>
     <hr style="width:50px;border:5px solid #3f51b5" class="w3-round">
-    <p>--> Flexible</p>
-    <p>--> Secure</p>
-    <p>--> Performance</p>
-    <p>--> Scalable</p>
-  </div>
-
-  <!-- Contact -->
-  <div class="w3-container" id="contact" style="margin-top:75px">
-    <h1 class="w3-xxxlarge "><b>Contact.</b></h1>
-    <hr style="width:50px;border:5px solid #3f51b5" class="w3-round">
-    <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
-    <form action="/action_page.php" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input w3-border" type="text" name="Name" required>
-      </div>
-      <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input w3-border" type="text" name="Email" required>
-      </div>
-      <div class="w3-section">
-        <label>Message</label>
-        <input class="w3-input w3-border" type="text" name="Message" required>
-      </div>
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-indigo w3-margin-bottom">Send Message</button>
-    </form>  
+    <p>&rarr; Flexible</p>
+    <p>&rarr; Secure</p>
+    <p>&rarr; Performance</p>
+    <p>&rarr; Scalable</p>
+    <p>&rarr; Savings (cost efficient)</p>
+    <p>&rarr; Easy integration</p>
+    <p>&rarr; Seamless upgrades</p>
+    <p>&rarr; Eco-friendliness</p>
   </div>
 
 <!-- End page content -->
